@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav bar</title>
+    <style>
+        .navbar{
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgb(186, 236, 172);
+            
+        }
+        .item{
+            position: relative;
+            margin-right: 25px;
+            cursor:pointer;
+        }
+        .item a{
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px;
+            color: black;
+            font-size: 30px;
+        }
+        .dropdown{
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: rgb(214, 225, 237);
+            opacity: 0;
+            visibility: hidden;
+            transform: translatey(10px);*/
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            z-index: 1; 
+            width: max-content;
+    
+            
+        }
+        .dropdown a {
+            display: block;
+            padding: 30px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.5s ease;
+        }
+
+       .dropdown a:hover {
+            background-color: #3774cf;
+        }
+       .item:hover .dropdown {
+           opacity: 1;
+           visibility: visible;
+           transform: translateY(0);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="item">
+            <a href="">Courses &#923;</a>
+            <div class="dropdown">
+                <a href="">GfG Classroom Program</a>
+                <a href="">DSA to Development</a>
+                <a href="">GATE 2026 Prep</a>
+                <a href="">Get 3 IBM Certifications</a>
+                <a href="">(NEW) Digital Marketing Program</a>
+            </div>
+        </div>
+        <div class="item">
+            <a href="">Tutorials &#923;</a>
+            <div class="dropdown">
+                <a href="">Python</a>
+                <a href="">Java</a>
+                <a href="">Data Structures & Algorithms</a>
+                <a href="">ML & Data Science</a>
+                
+                
+            </div>
+        </div>
+        <div class="item">
+            <a href="">Practice &#923;</a>
+            <div class="dropdown">
+                <a href="">Practice Coding Problems</a>
+                <a href="">(NEW) Digital Marketing Program</a>
+                <a href="">Problem of the Day</a>
+                <a href="">Scholarship Contest</a>
+                
+            </div>
+        </div>
+        <div class="item">
+            <a href="">Jobs &#923;</a>
+            <div class="dropdown">
+                <a href="">Become a mentor</a>
+                <a href="">Apply Now!</a>
+                <a href="">Post Jobs</a>
+                <a href="">Job-A-Thon</a>
+                
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
